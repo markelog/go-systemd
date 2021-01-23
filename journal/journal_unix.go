@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// +build !windows
+
 // Package journal provides write bindings to the local systemd journal.
 // It is implemented in pure Go and connects to the journal directly over its
 // unix socket.
@@ -37,20 +39,6 @@ import (
 	"sync/atomic"
 	"syscall"
 	"unsafe"
-)
-
-// Priority of a journal message
-type Priority int
-
-const (
-	PriEmerg Priority = iota
-	PriAlert
-	PriCrit
-	PriErr
-	PriWarning
-	PriNotice
-	PriInfo
-	PriDebug
 )
 
 var (
@@ -134,11 +122,6 @@ func Send(message string, priority Priority, vars map[string]string) error {
 	}
 
 	return nil
-}
-
-// Print prints a message to the local systemd journal using Send().
-func Print(priority Priority, format string, a ...interface{}) error {
-	return Send(fmt.Sprintf(format, a...), priority, nil)
 }
 
 func appendVariable(w io.Writer, name, value string) {
