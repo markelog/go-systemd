@@ -1,7 +1,7 @@
 # go-systemd
 
 [![Build Status](https://travis-ci.org/coreos/go-systemd.png?branch=master)](https://travis-ci.org/coreos/go-systemd)
-[![godoc](https://img.shields.io/badge/godoc-reference-5272B4)](https://pkg.go.dev/mod/github.com/coreos/go-systemd/v22/?tab=packages)
+[![godoc](https://img.shields.io/badge/godoc-reference-5272B4)](https://pkg.go.dev/mod/github.com/markelog/go-systemd/v23/?tab=packages)
 ![minimum golang 1.12](https://img.shields.io/badge/golang-1.12%2B-orange.svg)
 
 
@@ -32,7 +32,7 @@ It can be used to inform systemd of service start-up completion, watchdog events
 The `dbus` package connects to the [systemd D-Bus API](http://www.freedesktop.org/wiki/Software/systemd/dbus/) and lets you start, stop and introspect systemd units.
 [API documentation][dbus-doc] is available online.
 
-[dbus-doc]: https://pkg.go.dev/github.com/coreos/go-systemd/v22/dbus?tab=doc
+[dbus-doc]: https://pkg.go.dev/github.com/markelog/go-systemd/v23/dbus?tab=doc
 
 ### Debugging
 
