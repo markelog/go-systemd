@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// +build !windows
+
 // Package dlopen provides some convenience functions to dlopen a library and
 // get its symbols.
 package dlopen
